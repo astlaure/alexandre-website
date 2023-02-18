@@ -1,0 +1,17 @@
+.button {
+    padding: 0.5rem 2.5rem;
+    border-radius: 5px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 100ms ease-out;
+
+    &.primary {
+        color: var(--color-primary);
+        border: 2px solid var(--color-primary);
+
+        &:hover {
+            color: var(--color-secondary);
+            border-color: var(--color-secondary);
+        }
+    }
+}

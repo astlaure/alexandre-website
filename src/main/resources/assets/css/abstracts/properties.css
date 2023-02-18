@@ -1,0 +1,19 @@
+:root {
+    --color-primary: #9FC131;
+    --color-secondary: #9230C2;
+
+    --color-black: #2F2E41;
+    --color-gray: #cccccc;
+    --color-light-gray: #e6e6e6;
+
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Merriweather', serif;
+
+    --text-size-4xl: 4.209rem;
+    --text-size-3xl: 3.157rem;
+    --text-size-2xl: 2.369rem;
+    --text-size-xl: 1.777rem;
+    --text-size-lg: 1.333rem;
+    --text-size-md: 1rem;
+    --text-size-sm: 0.75rem;
+}

@@ -1,0 +1,21 @@
+.flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    .column {
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        &.medium-6 {
+            @media screen and (min-width: 48em) {
+                width: calc(100% / 12 * 6);
+            }
+        }
+    }
+}
+
+.container .flex-grid {
+    margin-left: -1rem;
+    margin-right: -1rem;
+}

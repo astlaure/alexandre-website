@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{layouts/default :: layout(~{::main})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alexandre Website</title>
+</head>
+<body>
+
+<main class="my-8">
+    <div class="container">
+        <h1>Articles</h1>
+        <form action="#" class="modern-form" th:action="@{/admin/articles/create}" method="post">
+            <input type="hidden" name="csrf" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+            <div class="form-input">
+                <label for="title">title</label>
+                <input type="text" name="title" id="title">
+            </div>
+            <div class="form-input">
+                <label for="uri">uri</label>
+                <input type="text" name="uri" id="uri">
+            </div>
+            <div class="form-input">
+                <label for="status">Status</label>
+                <select name="status" id="status">
+                    <option value="DRAFT" selected>draft</option>
+                    <option value="PUBLISHED">published</option>
+                </select>
+            </div>
+            <div class="form-input">
+                <label for="content">Content</label>
+                <textarea name="content" id="content"></textarea>
+            </div>
+            <button type="submit" class="button primary">Save</button>
+        </form>
+    </div>
+
+    <script th:src="@{/vendors/tinymce/tinymce.min.js}"></script>
+</main>
+
+</body>
+</html>

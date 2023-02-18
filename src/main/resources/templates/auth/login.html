@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{layouts/default :: layout(~{::main})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alexandre Website</title>
+</head>
+<body>
+
+<main>
+    <div class="container">
+        <h1 class="text-center">Administration</h1>
+
+        <div class="card max-w-36 mx-auto">
+            <form action="#" class="modern-form" th:action="@{/login}" method="post">
+                <input type="hidden" name="csrf" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+                <div class="form-input">
+                    <label for="username">username</label>
+                    <input type="email" name="username" id="username">
+                </div>
+                <div class="form-input">
+                    <label for="password">password</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div class="display-flex justify-end mt-4">
+                    <button type="submit" class="button primary">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
